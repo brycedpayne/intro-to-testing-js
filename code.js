@@ -10,12 +10,11 @@ const helloWorld = function() {
 
 
 function sayHello(input) {
-    // if (input === 'Alex') {
-    //     return 'Hello, Alex!';
-    // } else if (input === 'Pat') {
-    //     return 'Hello, Pat!';
-    // } else {
-    //     return 'Hello, Jane!';
-    // }
-    return 'Hello, ' + input + '!';
+
+    if (typeof input === "string" && input !== '' && isNaN(input)) {
+        return 'Hello, ' + input + '!';
+    } else {
+        return 'Hello, World!';
+    }
+
 }
