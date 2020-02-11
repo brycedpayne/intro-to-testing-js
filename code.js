@@ -6,7 +6,7 @@
 // function expression syntax (assigning an anonymous function to a variable)
 const helloWorld = function() {
     return "Hello, World!";
-}
+};
 
 
 function sayHello(input) {
@@ -20,4 +20,27 @@ function sayHello(input) {
 
 function isFive(input) {
     return parseFloat(input) === 5;
+}
+
+function isEven(input) {
+    return (parseFloat(input) % 2) === 0;
+}
+
+// function isVowel(input) {
+//     if (input === undefined || typeof input === 'boolean') {
+//         return false;
+//     } else if (typeof input === 'string') {
+//         return (input.toLowerCase() === 'a');
+//     } else {
+//         return false;
+//     }
+// }
+
+function isVowel(input) {
+    var vowels = ['a','e','i','o','u'];
+    return (input !== undefined) ? vowels.includes(input.toString().toLowerCase()) : false;
+}
+
+function add(x,y) {
+    return (isNaN(x) || isNaN(y)) ? NaN : parseInt(x) + parseInt(y);
 }
